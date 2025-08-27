@@ -42,10 +42,10 @@ function HeaderTop({ currentUser }) {
       <section
         className={`mx-auto flex h-[8vh] flex-row-reverse sm:h-[10vh] ${!inView ? "fixed top-2.5 right-1/2 z-10 w-[90%] translate-x-1/2 justify-between rounded-xl bg-white px-2 shadow-[0px_12px_16px_-6px] shadow-black/40 sm:w-[75%] lg:w-[700px]" : "w-[90%] justify-between"}`}
       >
-        <div className="flex h-full w-[40px] items-center justify-center sm:w-[50px]">
+        <div className="flex h-full w-[50px] items-center justify-center sm:w-[70px]">
           <Link
             href="/#"
-            className="relative block h-1/2 w-[40px] sm:h-full sm:w-[50px]"
+            className="relative block h-10/12 w-[50px] sm:h-full sm:w-[70px]"
           >
             <img src="/Logo.png" alt="header image" className="h-full w-full" />
           </Link>
