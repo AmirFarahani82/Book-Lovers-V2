@@ -12,7 +12,7 @@ function SearchBookForm() {
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
-    if (!query || query.length < 1) {
+    if (!query || query.length < 3) {
       setResult([]);
       return;
     }
@@ -50,12 +50,12 @@ function SearchBookForm() {
       <div
         className={`absolute top-[110px] left-1/2 z-10 flex max-h-[270px] w-[300px] -translate-x-1/2 justify-center overflow-y-auto rounded-lg bg-white px-5 py-3.5 text-lg sm:w-[400px] ${!isFocused && !result.length ? "hidden" : ""}`}
       >
-        {query.length < 1 && (
+        {query.length < 3 && (
           <p className="text-center text-base">
             برای مشاهده نتایج حداقل ۳ کلمه بنویسید
           </p>
         )}
-        {!isLoading && !result.length && query.length >= 1 && (
+        {!isLoading && !result.length && query.length >= 3 && (
           <p className="text-center text-base">کتابی پیدا نشد:(</p>
         )}
         {isLoading ? <SpinnerMini /> : <SearchResult book={result} />}
