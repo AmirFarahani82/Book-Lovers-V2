@@ -41,7 +41,7 @@ function CartOperations({ plusRef, minusRef, bookId, bookName }) {
         toast.success(`کتاب ${bookName} از سبد خرید حذف شد`, { id: toastId });
       }
     } catch (error) {
-      console.log(error.message);
+      throw new Error(error.message);
     } finally {
       setIsLoading(false);
     }

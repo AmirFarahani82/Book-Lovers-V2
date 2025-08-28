@@ -4,6 +4,10 @@ import CartItem from "../_components/CartItem";
 import { getCart } from "../_lib/actions";
 import { getBookById } from "../_lib/data-service";
 
+export const metadata = {
+  title: "سبد خرید",
+};
+
 async function page() {
   const cart = await getCart();
   const ids = cart.map((c) => c.bookId);

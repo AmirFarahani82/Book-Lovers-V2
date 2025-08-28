@@ -45,7 +45,6 @@ function CartProvider({ children }) {
         }
       },
     );
-    console.log(authListener);
     return () => authListener?.unsubscribe();
   }, [supabase]);
 

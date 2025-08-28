@@ -71,7 +71,6 @@ export async function signup({ email, password, name }) {
     throw new Error(error.message || "خطا در ایجاد حساب کاربری");
   }
   if (data) {
-    console.log("User signed up successfully:", data);
   }
   return data;
 }

@@ -10,7 +10,7 @@ function LogoutButton() {
     try {
       const result = await logout();
     } catch (error) {
-      console.log(error);
+      throw new Error(error.message);
     }
     route.refresh();
   };
