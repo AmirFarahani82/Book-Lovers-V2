@@ -1,1 +1,18 @@
-This is a online website to buy your favorite books
+# Book Lovers V2
+
+## An online website to buy your favorite books
+
+### In Book Lovers you can:
+
+- See list of books
+- Search based on book name
+- See details of each books
+- Add books to your shopping cart
+
+---
+
+ <p>This project is built with __NextJs__ and uses supabase for database and authenication</p>
+
+---
+
+[See live demo](https://book-lovers-v2.netlify.app/)
