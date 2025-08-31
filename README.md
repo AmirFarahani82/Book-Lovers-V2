@@ -11,7 +11,7 @@
 
 ---
 
- <p>This project is built with __NextJs__ and uses supabase for database and authenication</p>
+This project is built with **NextJs** and uses **supabase** git for database and authenication
 
 ---
 
