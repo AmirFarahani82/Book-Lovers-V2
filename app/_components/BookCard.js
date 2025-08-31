@@ -1,10 +1,11 @@
-import { getUser } from "../_lib/actions";
+import { getCart, getUser } from "../_lib/actions";
 import { getbooks } from "../_lib/data-service";
 import BookCardContent from "./BookCardContent";
 import Pagination from "./Pagination";
 
 async function BookCard({ searchParams }) {
   const params = await searchParams;
+  const cart = await getCart();
 
   const filter = params?.filter || "all";
   const page = !params?.page ? 1 : Number(searchParams.page);
@@ -21,6 +22,7 @@ async function BookCard({ searchParams }) {
           <BookCardContent
             key={book.id}
             book={book}
+            cart={cart}
             {...(currentUser && { currentUser })}
           />
         ))}

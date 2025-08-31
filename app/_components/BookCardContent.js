@@ -7,14 +7,14 @@ import AddToCartButton from "./AddToCartButton";
 import { useCart } from "./CartContext";
 import CartOperations from "./CartOperations";
 
-function BookCardContent({ book, currentUser }) {
+function BookCardContent({ book, currentUser, cart }) {
   const [flip, setFlip] = useState(false);
   const frontButtonRef = useRef(null);
   const backButtonRef = useRef(null);
   const plusRef = useRef(null);
   const minusRef = useRef(null);
 
-  const { cart } = useCart();
+  // const { cart } = useCart();
 
   const isInCart = cart.some((item) => book.id === item.bookId);
 
@@ -82,6 +82,7 @@ function BookCardContent({ book, currentUser }) {
               minusRef={minusRef}
               bookId={book.id}
               bookName={book.name}
+              cart={cart}
             />
           )}
         </div>

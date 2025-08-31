@@ -12,7 +12,6 @@ function LogoutButton() {
     } catch (error) {
       throw new Error(error.message);
     }
-    route.refresh();
   };
   return (
     <button onClick={handleLogout}>

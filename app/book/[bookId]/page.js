@@ -47,7 +47,11 @@ async function page({ params }) {
                 افزودن به سبد خرید
               </AddToCartButton>
             ) : (
-              <CartOperations bookId={book.id} bookName={book.name} />
+              <CartOperations
+                bookId={book.id}
+                bookName={book.name}
+                cart={cart}
+              />
             )}
           </div>
         </div>

@@ -67,6 +67,7 @@ export async function login(formData = FormData) {
     if (error || !data.user) {
       return { success: false, message: "ایمل یا رمزعبور اشتباه است." };
     }
+    getCart();
   } catch (error) {
     return { success: false, message: error.message };
   }
@@ -109,7 +110,7 @@ export async function getCart() {
   const { data, error } = await supabase
     .from("cart")
     .select("*")
-    .eq("userId", user.id);
+    .eq("userId", user?.id);
 
   if (error) {
     console.error("Error fetching cart:", error);

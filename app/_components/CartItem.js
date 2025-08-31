@@ -16,7 +16,7 @@ function CartItem({ book, cart }) {
           width={112}
           height={112}
         />
-        <CartOperations bookId={book.id} bookName={book.name} />
+        <CartOperations bookId={book.id} bookName={book.name} cart={cart} />
       </div>
       <div className="flex flex-col justify-center gap-3">
         <p>کتاب {book.name}</p>

@@ -5,13 +5,13 @@ import { addToCart, decrease } from "../_lib/actions";
 import { useCart } from "./CartContext";
 import { useState } from "react";
 
-function CartOperations({ plusRef, minusRef, bookId, bookName }) {
+function CartOperations({ plusRef, minusRef, bookId, bookName, cart }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const btnStyles =
     "flex items-center justify-center rounded-full cursor-pointer bg-purple-500 size-6 text-white transition-all duration-400  hover:scale-110 hover:bg-purple-600 active:translate-y-0 active:scale-97";
 
-  const { cart, addItem, decreaseItem } = useCart();
+  const { addItem, decreaseItem } = useCart();
 
   const handleAddItem = async () => {
     const toastId = toast.loading("در حال افزودن به سبد خرید...");
