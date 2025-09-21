@@ -11,7 +11,7 @@
 
 ---
 
-This project is built with **NextJs** and uses **supabase** git for database and authenication
+This project is built with **NextJs** and uses **supabase** for database and authenication
 
 ---
 
