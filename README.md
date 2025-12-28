@@ -15,4 +15,4 @@ This project is built with **NextJs** and uses **supabase** for database and aut
 
 ---
 
-[See live demo](https://book-lovers-v2.netlify.app/)
+[See live demo](https://book-lovers-v2.vercel.app/)
